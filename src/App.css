@@ -1,33 +1,126 @@
-.App {
+html, body {
+  margin: 0;
+}
+
+body {
+  width: 50%;
+  margin: 0 auto;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.header {
+  background: #825C9B;
+  color: #ffffff;
+  text-align: center;
+  height: 150px;
+}
+
+.header h2 {
+  padding: 2.5em;
+}
+
+main {
+  margin-top: 1em;
+  background: #e2e2e2;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  width: 50%;
+}
+
+section {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.left {
+  background: #ffffff;
+}
+
+.left .container {
+  border: 2px solid #d8d8d8;
+  padding: 1em 2em;
+}
+
+.left h2 {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.label1 {
+  font-size: x-small;
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input, button {
+  margin-top: 1em;
+  width: 100%;
+  height: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.form-field.input {
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  text-align: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input:focus {
+  outline: none;
+}
+
+.input:invalid {
+  border: 1px solid red;
+}
+
+.btn.btn-primary {
+  background: #4578E0;
+  color: #ffffff;
+  border: none;
+}
+
+button:disabled {
+  background: #9EBBF5 !important;
+}
+
+table {
+  width: 100%;
+}
+
+thead td {
+  font-weight: bold;
+}
+
+td {
+  border-bottom: 1px solid #b4b3b3;
+  line-height: 1.75em;
+}
+
+td span:nth-child(2) {
+  margin-left: 4em;
+}
+
+div {
+  line-height: 1.75em
+}
+.amount-table div {
+  display: inline-flex;
+}
+
+.amount-table div:nth-child(1n) {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .col {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  td {
+    line-height: 1em !important;
   }
 }
